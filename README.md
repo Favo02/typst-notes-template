@@ -16,4 +16,4 @@ and
 - custom Copilot instructions for automatic PR review (no more typos)
 - GitHub actions to automatically compile PDF (both artifact for PRs and release for main branch)
 
-See the [compiled PDF](https://github.com/Favo02/typst-notes-template/releases/download/release-3b47f50f59896bb24dd76a80536c468d5cdcec4f/template.pdf) for and example!
+See the [compiled PDF](https://github.com/Favo02/typst-notes-template/releases/download/release-73e7a9eaaf498760a00de35771e1f1814946e87b/template.pdf) for and example!
