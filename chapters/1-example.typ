@@ -82,13 +82,22 @@ Il template fornisce diversi tipi di riquadri per evidenziare contenuti specific
 
 == Equazioni numerate <equazioni-numerate>
 
-Le equazioni possono essere numerate e referenziate tramite `link-equation()`:
+Le equazioni sono numerate automaticamente solo all'interno dei box `teorema` e `dimostrazione`:
 
-$ E = m c^2 $ <einstein>
+#teorema("Relatività di Einstein")[
+  La relazione massa-energia è espressa da:
+  $ E = m c^2 $ <einstein>
 
-$ a^2 + b^2 = c^2 $ <pitagora>
+  #dimostrazione[
+    $ E/m = c^2 $ <einstein2>
+  ]
+] <teorema-einstein>
 
-Possiamo poi riferirci all'equazione di Einstein (#link-equation(<einstein>)) o al teorema di Pitagora (#link-equation(<pitagora>)).
+Le equazioni fuori dai box non sono numerate:
+
+$ x + y = z $
+
+$ integral_0^infinity e^(-x) dif x = 1 $
 
 == Collegamenti e riferimenti
 
@@ -98,11 +107,11 @@ Possiamo creare collegamenti a sezioni utilizzando `link-section()`. Ad esempio,
 
 === Collegamenti a teoremi
 
-Possiamo riferirci ai teoremi usando `link-teorema()`. Vedi #link-teorema(<esempio-teorema>) o #link-teorema(<somma-gauss>).
+Possiamo riferirci ai teoremi usando `link-teorema()`. Vedi #link-teorema(<teorema-einstein>).
 
 === Collegamenti a equazioni
 
-Come già mostrato, possiamo usare `link-equation()` per riferirci alle equazioni: #link-equation(<einstein>) e #link-equation(<pitagora>).
+Le equazioni numerate nei teoremi possono essere referenziate con `link-equation()`: #link-equation(<einstein>) e #link-equation(<einstein2>).
 
 == Liste di definizioni
 
