@@ -15,7 +15,7 @@ The template provides functions to color mathematical text:
 - `mp()`: $mp(1+2 -> "purple")$
 - `mb()`: $mb(1+2 -> "blue")$
 
-#esempio[
+#example[
   Using colors in equations:
 
   $ f(n) = mg(O(n^2)) + mm(Omega(n log n)) + mo(Theta(n)) $
@@ -29,25 +29,25 @@ The template provides different types of boxes to highlight specific content.
 
 === Nota (Note)
 
-#nota[
+#note[
   This is a "note" box, useful for adding supplementary information or important observations.
 ]
 
 === Attenzione (Warning)
 
-#attenzione[
+#warning[
   This is a "warning" box, used for alerts or critical information not to be forgotten.
 ]
 
 === Informalmente (Informally)
 
-#informalmente[
+#informally[
   This box is used for informal or intuitive explanations of complex concepts, before presenting formal definitions.
 ]
 
 === Esempio (Example)
 
-#esempio[
+#example[
   "Example" boxes contain practical applications or concrete cases to illustrate theoretical concepts.
 
   For instance, given the set $A = {1, 2, 3}$, its cardinality is $|A| = 3$.
@@ -55,7 +55,7 @@ The template provides different types of boxes to highlight specific content.
 
 === Dimostrazione (Proof)
 
-#dimostrazione[
+#proof[
   "Proof" boxes contain formal proofs of theorems.
 
   Let's prove that $1 + 1 = 2$:
@@ -68,13 +68,13 @@ The template provides different types of boxes to highlight specific content.
 
 === Teorema (Theorem)
 
-#teorema("Example Theorem")[
+#theorem[
   This is an example theorem. Each theorem is numbered automatically.
 
   $ forall n in bb(N), quad n^2 >= 0 $
 ] <example-theorem>
 
-#teorema("Another Theorem")[
+#theorem(title: "Another Theorem")[
   A second theorem to show progressive numbering.
 
   $ sum_(i=1)^n i = (n(n+1))/2 $
@@ -84,11 +84,11 @@ The template provides different types of boxes to highlight specific content.
 
 Equations are numbered automatically only inside `teorema` and `dimostrazione` boxes:
 
-#teorema("Einstein's Relativity")[
+#theorem(title: "Einstein's Relativity")[
   The mass-energy relation is expressed by:
   $ E = m c^2 $ <einstein>
 
-  #dimostrazione[
+  #proof[
     $ E/m = c^2 $ <einstein2>
   ]
 ] <einstein-theorem>
@@ -107,7 +107,7 @@ We can create links to sections using `link-section()`. For example, back to #li
 
 === Theorem Links
 
-We can reference theorems using `link-teorema()`. See #link-teorema(<einstein-theorem>).
+We can reference theorems using `link-teorema()`. See #link-theorem(<einstein-theorem>).
 
 === Equation Links
 
@@ -141,7 +141,7 @@ The template supports pseudocode using the `lovelace` package:
   [*Return* $"sum"$],
 )
 
-#esempio[
+#example[
   A more complex example with conditions:
 
   #pseudocode(
@@ -185,7 +185,7 @@ The `fletcher` package allows creating graph diagrams:
   )
 ]
 
-#esempio[
+#example[
   A more complex graph with cycles:
 
   #align(center)[
@@ -231,7 +231,7 @@ The `cetz` package allows creating custom drawings:
   })
 ]
 
-#esempio[
+#example[
   A diagram with different shapes:
 
   #align(center)[

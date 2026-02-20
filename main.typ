@@ -4,42 +4,41 @@
 #import "template.typ": *
 
 #show: academic-notes.with(
-  // Required parameters
+  // --- Required
   title: "Course Name",
   subtitle: "University Name - Master's Degree in Computer Science",
   authors: (
     ("Your Name", "your-github-username"),
     ("Another Author", "their-github-username"),
   ),
+  lang: "en", // or "it", IMPORTANT!
 
-  // Optional parameters (these have defaults if not specified)
+  // --- Optional, uncomment to change
   repo-url: "https://github.com/your-username/repo-name",
-  license: "CC-BY-4.0",
-  license-url: "https://creativecommons.org/licenses/by/4.0/",
-  last-modified-label: "Last modified", // Customize this (e.g., "Ultima modifica" for Italian)
+  course-url: "https://university/professor/course",
+  year: "2025-26",
+  lecturer: "Professor",
+  // date: datetime.today(),
+  // license: "CC-BY-4.0",
+  // license-url: "https://creativecommons.org/licenses/by/4.0/",
+  // heading-numbering: "1.1.",
+  // equation-numbering: none,
+  // page-numbering: "1",
 
-  // Custom introduction (optional - if omitted, a default one is generated)
-  introduction: [
-    #show link: underline
-    = Course Name Notes
-
-    Notes from the #link("https://example.com")[_Course Name_] course (a.y. 2024/25),
-    taught by Prof. _Professor Name_, Master's Degree in Computer Science,
-    University Name.
-
-    Created by #(("Your Name", "your-github-username"), ("Another Author", "their-github-username")).map(author => [#link("https://github.com/" + author.at(1))[#text(author.at(0))]]).join([, ]),
-    with contributions from #link("https://github.com/your-username/repo-name/graphs/contributors")[other contributors].
-
-    These notes are open source: #link("https://github.com/your-username/repo-name")[github.com/your-username/repo-name]
-    licensed under #link("https://creativecommons.org/licenses/by/4.0/")[CC-BY-4.0].
-    Contributions and corrections are welcome via Issues or Pull Requests.
-
-    Last modified: #datetime.today().display("[day]/[month]/[year]").
-  ],
-
-  // Styling options (optional - these have sensible defaults)
-  heading-numbering: "1.1.",
-  figure-supplement: "Figure",
+  // --- Optional with language-based defaults, uncomment to change
+  // introduction: auto,
+  // last-modified-label: auto,
+  // outline-title: auto,
+  // part-label: auto,
+  // note-title: auto,
+  // warning-title: auto,
+  // informally-title: auto,
+  // example-title: auto,
+  // proof-title: auto,
+  // theorem-title: auto,
+  // theorem-label: auto,
+  // equation-supplement: auto,
+  // figure-supplement: auto,
 )
 
 // ============================================================================
@@ -55,30 +54,30 @@
 
 This is example content. You can use all template helpers:
 
-#nota[
+#note[
   This is an informative note.
 ]
 
-#attenzione[
+#warning[
   This is an important warning.
 ]
 
-#esempio[
+#example[
   This is a practical example.
 ]
 
-#informalmente[
+#informally[
   Informal explanation of the concept.
 ]
 
 === Theorems and Proofs
 
-#teorema("Example Theorem")[
+#theorem(title: "Example Theorem")[
   This is the theorem content. Equations are numbered automatically:
   $ sum_(i=1)^n i = (n(n+1))/2 $ <eq-sum>
 ]
 
-#dimostrazione[
+#proof[
   This is the proof. Equations are also numbered here:
   $ 2 dot sum_(i=1)^n i = sum_(i=1)^n i + sum_(i=1)^n i $
 
