@@ -243,7 +243,12 @@ The `cetz` package allows creating custom drawings:
       content((0.5, 0.3), [Box 1])
 
       // Circle
-      circle((2.5, 0.3), radius: 0.4, fill: red.transparentize(70%), stroke: 2pt + red)
+      circle(
+        (2.5, 0.3),
+        radius: 0.4,
+        fill: red.transparentize(70%),
+        stroke: 2pt + red,
+      )
       content((2.5, 0.3), [Box 2])
 
       // Arrow
