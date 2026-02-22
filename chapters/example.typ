@@ -1,12 +1,14 @@
 #import "../template.typ": *
 
-= Template Features and Examples
+= Template Features and Examples           
 
 This chapter demonstrates all custom elements available in the template.
 
 == Colored Math Text <colored-text>
 
 The template provides functions to color mathematical text:
+
+
 
 - `mg()`: $mg(1+2 -> "olive green")$
 - `mm()`: $mm(1+2 -> "maroon")$
@@ -27,11 +29,11 @@ The template provides functions to color mathematical text:
 
 The template provides different types of boxes to highlight specific content.
 
-=== Nota (Note)
+    === Nota (Note)
 
-#note[
-  This is a "note" box, useful for adding supplementary information or important observations.
-]
+    #note[
+      This is a "note" box, useful for adding supplementary information or important observations.
+    ]
 
 === Attenzione (Warning)
 
