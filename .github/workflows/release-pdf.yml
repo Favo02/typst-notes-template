@@ -16,6 +16,11 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
+    - name: Check formatting (typstyle)
+      uses: typstyle-rs/typstyle-action@v0.9.3
+      with:
+        opts: --check
+
     - name: Setup Typst
       uses: typst-community/setup-typst@v3
 
