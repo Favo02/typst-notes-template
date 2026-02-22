@@ -16,17 +16,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Check formatting (typstyle)
-        id: typstyle
-        uses: typstyle-rs/typstyle-action@v0.9.3
-        with:
-          opts: --check
-        continue-on-error: true
-
-      - name: Warn if formatting issues found
-        if: steps.typstyle.outcome == 'failure'
-        run: echo "::warning::Some .typ files are not formatted correctly. Install 'typstyle' and run 'typstyle -i .' locally to fix."
-
       - name: Setup Typst
         uses: typst-community/setup-typst@v3
 
