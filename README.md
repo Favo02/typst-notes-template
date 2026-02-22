@@ -20,6 +20,10 @@ and
 
 See the [simple PDF](https://github.com/Favo02/typst-notes-template/releases/) or a [real usage PDF](https://github.com/Favo02/algoritmi-e-complessita/releases/) for an example!
 
+> [!WARNING]
+> Repository settings (branch rulesets, Issue/PR labels, etc.) are **not** imported.
+> Rules can be found in `.github/rulesets` folder, import from Settings > Rules > Rulesets > New ruleset > Import a ruleset.
+
 ## Quick Start
 
 ### 1. Minimal Usage
